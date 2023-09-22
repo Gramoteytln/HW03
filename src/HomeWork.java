@@ -1,17 +1,18 @@
 
 public class HomeWork {
     public static int calculateAbsoluteDifference(int a, int b) {
-        return Math.abs(a - b);
+        return a - b;
     }
 
     public static void main(String[] args) {
+        // Задача 1
         int a = 5;
         int b = 9;
         int result = calculateAbsoluteDifference(a, b);
-
         System.out.println("a = " + a);
-        System.out.println("a = " + b);
+        System.out.println("b = " + b);
         System.out.println("result = " + result);
+        System.out.println(" ");
 
         a = -8;
         b = 7;
@@ -20,72 +21,28 @@ public class HomeWork {
         System.out.println("a = " + a);
         System.out.println("a = " + b);
         System.out.println("result = " + result);
+        System.out.println(" ");
 
-    }
-}
+        // Задача 2
+        String string1 = "Python";
+        char result1 = string1.charAt(0);
+        System.out.println("string1 = \"" + string1 + "\"");
+        System.out.println("result1 = '" + result1 + "'");
+        System.out.println(" ");
 
-class FirstChar {
-    public static char getFirstCharacter(String inputString) {
-        if (inputString != null && !inputString.isEmpty()) {
-            char[] charArray = inputString.toCharArray();
-            return charArray[0];
-        } else {
-            throw new IllegalArgumentException(" ");
-        }
-    }
+        // Задача 3
+        String string2 = "Python";
+        char result2 = string2.charAt(string2.length() - 1);
+        System.out.println("string2 = \"" + string2 + "\"");
+        System.out.println("result2 = '" + result2 + "'");
+        System.out.println(" ");
 
-    public static void main(String[] args) {
-        String string = "Python";
-        char result = getFirstCharacter(string);
-        System.out.println("string = \"" + string + "\"");
-        System.out.println("result = '" + result + "'");
-    }
-}
-
-class LastChar {
-    public static char getLastCharacter(String inputString) {
-        if (inputString != null && !inputString.isEmpty()) {
-            int lastIndex = inputString.length() - 1;
-            return inputString.charAt(lastIndex);
-        } else {
-            throw new IllegalArgumentException(" ");
-        }
-    }
-
-    public static void main(String[] args) {
-        String string = "Python";
-        char result = getLastCharacter(string);
-        System.out.println("string = \"" + string + "\"");
-        System.out.println("result = '" + result + "'");
-    }
-}
-
-class StringUtils {
-    public static String swapFirstAndLastCharacter(String inputString) {
-        if (inputString != null && !inputString.isEmpty() && inputString.length() > 1) {
-            char firstChar = inputString.charAt(0);
-            char lastChar = getLastCharacter(inputString);
-
-            String swappedString = lastChar + inputString.substring(1, inputString.length() - 1) + firstChar;
-            return swappedString;
-        } else {
-            return inputString;
-        }
-    }
-
-    public static char getLastCharacter(String inputString) {
-        if (inputString != null && !inputString.isEmpty()) {
-            int lastIndex = inputString.length() - 1;
-            return inputString.charAt(lastIndex);
-        } else {
-            throw new IllegalArgumentException(" ");
-        }
-    }
-
-    public static void main(String[] args) {
-        String string = "Python";
-        String result = swapFirstAndLastCharacter(string);
-        System.out.println("string = \"" + string + "\"");
-        System.out.println("result = \"" + result + "\"");
+        // Задача 4
+        String string3 = "Python";
+        String result3 = string3.charAt(string3.length() - 1) +
+                string3.substring(1, string3.length() - 1) +
+                string3.charAt(0);
+        System.out.println("string3 = \"" + string3 + "\"");
+        System.out.println("result3 = \"" + result3 + "\"");
     }
 }
