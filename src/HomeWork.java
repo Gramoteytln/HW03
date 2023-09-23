@@ -1,6 +1,6 @@
 
 public class HomeWork {
-    public int calculateAbsoluteValue(int a, int b) {
+    public static int calculateAbsoluteValue(int a, int b) {
         return Math.abs(a - b);
     }
 
@@ -17,12 +17,11 @@ public class HomeWork {
     }
 
     public static void main(String[] args) {
-            HomeWork homework = new HomeWork();
 
         // Задача 1
         int a = 5;
         int b = 9;
-        int result = homework.calculateAbsoluteValue(a, b);
+        int result = calculateAbsoluteValue(a, b);
         System.out.println("a = " + a);
         System.out.println("b = " + b);
         System.out.println("result = " + result);
@@ -30,13 +29,14 @@ public class HomeWork {
 
         a = -8;
         b = 7;
-        result = homework.calculateAbsoluteValue(a, b);
+        result = calculateAbsoluteValue(a, b);
         System.out.println("a = " + a);
         System.out.println("b = " + b);
         System.out.println("result = " + result);
         System.out.println(" ");
 
         // Задача 2
+        HomeWork homework = new HomeWork();
         String string1 = "Python";
         char result1 = homework.getFirstCharacter(string1);
         System.out.println("string1 = \"" + string1 + "\"");
