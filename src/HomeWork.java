@@ -4,6 +4,18 @@ public class HomeWork {
         return a - b;
     }
 
+    public static char getFirstCharacter(String str) {
+        return str.charAt(0);
+    }
+
+    public static char getLastCharacter(String str) {
+        return str.charAt(str.length() - 1);
+    }
+
+    public static String swapFirstAndLastCharacters(String str) {
+        return str.charAt(str.length() - 1) + str.substring(1, str.length() - 1) + str.charAt(0);
+    }
+
     public static void main(String[] args) {
         // Задача 1
         int a = 5;
@@ -17,7 +29,6 @@ public class HomeWork {
         a = -8;
         b = 7;
         result = calculateAbsoluteDifference(a, b);
-
         System.out.println("a = " + a);
         System.out.println("a = " + b);
         System.out.println("result = " + result);
@@ -25,23 +36,21 @@ public class HomeWork {
 
         // Задача 2
         String string1 = "Python";
-        char result1 = string1.charAt(0);
+        char result1 = getFirstCharacter(string1);
         System.out.println("string1 = \"" + string1 + "\"");
         System.out.println("result1 = '" + result1 + "'");
         System.out.println(" ");
 
         // Задача 3
         String string2 = "Python";
-        char result2 = string2.charAt(string2.length() - 1);
+        char result2 = getLastCharacter(string2);
         System.out.println("string2 = \"" + string2 + "\"");
         System.out.println("result2 = '" + result2 + "'");
         System.out.println(" ");
 
         // Задача 4
         String string3 = "Python";
-        String result3 = string3.charAt(string3.length() - 1) +
-                string3.substring(1, string3.length() - 1) +
-                string3.charAt(0);
+        String result3 = swapFirstAndLastCharacters(string3);
         System.out.println("string3 = \"" + string3 + "\"");
         System.out.println("result3 = \"" + result3 + "\"");
     }
